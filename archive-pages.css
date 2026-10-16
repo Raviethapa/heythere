@@ -1,0 +1,94 @@
+/* Additional components for the three archive pages. Intentionally uses tokens from style.css. */
+.archive-page { padding-top: 7.5rem; }
+.archive-hero,.archive-library,.history-content,.poetry-content,.line-notebook,.archive-sources,.archive-closing { width:100%; max-width:calc(var(--max) + 2 * var(--gutter)); margin-inline:auto; padding-inline:var(--gutter); }
+.archive-hero { padding-bottom:clamp(3.5rem,8vw,7rem); }
+.archive-topline { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; color:var(--muted); font-size:.78rem; letter-spacing:.09em; text-transform:uppercase; padding-bottom:1.4rem; border-bottom:1px solid var(--line); }
+.archive-hero-grid { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(250px,.55fr); gap:clamp(2rem,7vw,6rem); padding-block:clamp(2.7rem,6vw,5.5rem); align-items:center; }
+.archive-hero h1 { font:400 clamp(4rem,10vw,8.5rem)/.88 var(--serif); letter-spacing:-.045em; max-width:9ch; }
+.archive-hero h1 em,.archive-section-heading h2 em,.archive-closing h2 em { color:var(--accent); font-weight:400; }
+.archive-lead { font:400 clamp(1.5rem,2.4vw,2.2rem)/1.2 var(--serif); max-width:25ch; margin:1.8rem 0 1rem; }
+.archive-intro { max-width:67ch; color:var(--muted); }
+.archive-tags { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.5rem; }
+.archive-tags span { border:1px solid var(--line-strong); padding:.38rem .8rem; border-radius:999px; color:var(--muted); font-size:.84rem; }
+.archive-note { position:relative; overflow:hidden; min-height:300px; padding:1.5rem; border:1px solid var(--line-strong); border-radius:20px; background:radial-gradient(ellipse at 85% 0%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 50%),var(--bg-raise); display:flex; flex-direction:column; justify-content:center; }
+.note-label,.note-foot,.archive-eyebrow { font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.archive-note blockquote { font:400 clamp(1.8rem,3vw,2.7rem)/1.05 var(--serif); max-width:14ch; margin:1.5rem 0; position:relative; z-index:1; }
+.archive-mark { position:absolute; right:.4rem; bottom:-2rem; color:color-mix(in srgb,var(--text) 8%,transparent); font:400 8rem/1 var(--serif); pointer-events:none; }
+.archive-statline { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:1rem 0; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; color:var(--muted); font-size:.9rem; }
+.archive-statline strong { font:400 1.8rem/1 var(--serif); color:var(--text); margin-right:.3rem; }
+.archive-statline a,.text-link { text-decoration-thickness:1px; text-underline-offset:.25em; }
+.archive-library,.history-content,.poetry-content,.line-notebook,.archive-sources { padding-bottom:clamp(4rem,8vw,7rem); }
+.archive-section-heading { display:flex; justify-content:space-between; align-items:end; gap:2rem; margin-bottom:2rem; }
+.archive-section-heading h2 { font:400 clamp(2.7rem,5vw,4.7rem)/.98 var(--serif); letter-spacing:-.03em; margin:.65rem 0 .6rem; }
+.archive-section-heading p { color:var(--muted); margin:0; max-width:55ch; }
+.archive-count { display:flex; flex-direction:column; text-align:right; color:var(--muted); font-size:.85rem; white-space:nowrap; }
+.archive-count strong { font:400 2.4rem/1 var(--serif); color:var(--text); }
+.archive-controls { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.archive-search { display:flex; align-items:center; gap:.7rem; flex:1 1 300px; max-width:500px; border:1px solid var(--line-strong); border-radius:999px; padding:.1rem 1rem; color:var(--muted); }
+.archive-search input { width:100%; padding:.65rem 0; border:0; outline:0; background:transparent; color:var(--text); font:inherit; }
+.archive-filters { display:flex; flex-wrap:wrap; gap:.4rem; }
+.archive-filter { border:1px solid var(--line-strong); background:transparent; color:var(--muted); border-radius:999px; padding:.48rem .85rem; font:500 .85rem var(--sans); cursor:pointer; }
+.archive-filter.is-active,.archive-filter:hover { color:var(--text); background:var(--bg-raise); border-color:var(--accent); }
+.book-results-meta { display:flex; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.82rem; padding:1rem 0; }
+.book-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
+.book-card { position:relative; padding:1.15rem; min-height:205px; border:1px solid var(--line); border-radius:16px; background:var(--bg-raise); display:flex; flex-direction:column; gap:.55rem; transition:transform .18s,border-color .18s; }
+.book-card:hover { transform:translateY(-3px); border-color:var(--line-strong); }
+.book-meta { display:flex; justify-content:space-between; gap:.6rem; color:var(--muted); font-size:.73rem; letter-spacing:.07em; text-transform:uppercase; }
+.book-card h3 { font:400 1.55rem/1.05 var(--serif); margin:.25rem 0 0; }
+.book-author { font-size:.9rem; color:var(--muted); }
+.book-why { font-size:.88rem; line-height:1.5; margin-top:auto; }
+.book-card-foot { display:flex; justify-content:space-between; gap:.5rem; border-top:1px solid var(--line); padding-top:.65rem; margin-top:.35rem; color:var(--muted); font-size:.75rem; }
+.book-card-foot span:first-child { color:var(--accent); }
+.archive-source-note { color:var(--muted); font-size:.86rem; line-height:1.7; margin-top:1.4rem; }
+.archive-closing { border-top:1px solid var(--line); padding-top:clamp(3rem,6vw,5rem); padding-bottom:clamp(5rem,8vw,8rem); }
+.archive-closing h2 { font:400 clamp(3rem,7vw,6rem)/.92 var(--serif); margin:1rem 0; letter-spacing:-.03em; }
+.archive-closing p { color:var(--muted); max-width:44ch; margin-bottom:1.5rem; }
+.history-timeline { border-top:1px solid var(--line); }
+.history-era { display:grid; grid-template-columns:minmax(145px,.35fr) minmax(0,1fr); gap:clamp(1.5rem,5vw,5rem); padding:2rem 0; border-bottom:1px solid var(--line); }
+.era-date { font:400 1.55rem/1.1 var(--serif); color:var(--accent); }
+.era-index,.poet-lang { color:var(--muted); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.era-body h3 { font:400 clamp(1.9rem,3vw,2.8rem)/1.05 var(--serif); margin:.5rem 0 .7rem; }
+.era-body p { max-width:72ch; color:var(--muted); }
+.era-questions { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+.era-questions span { border:1px solid var(--line); border-radius:999px; padding:.35rem .7rem; font-size:.8rem; color:var(--muted); }
+.world-next-panel { padding:clamp(1.5rem,4vw,3rem); border:1px solid var(--line-strong); border-radius:20px; margin-top:2rem; background:var(--bg-raise); }
+.world-next-panel h3 { font:400 clamp(2.2rem,4vw,3.6rem)/1 var(--serif); margin:.6rem 0; }
+.world-next-panel p { color:var(--muted); max-width:80ch; margin:0; }
+.source-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; margin-top:1.5rem; }
+.source-grid a { display:flex; flex-direction:column; gap:.65rem; padding:1.1rem; border:1px solid var(--line); border-radius:14px; text-decoration:none; min-height:170px; background:var(--bg-raise); }
+.source-grid a:hover { border-color:var(--accent); }
+.source-grid strong { font:400 1.35rem/1.1 var(--serif); }
+.source-grid span { color:var(--muted); font-size:.85rem; line-height:1.45; }
+.source-grid b { font-size:.78rem; font-weight:500; color:var(--accent); margin-top:auto; }
+.poet-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.85rem; }
+.poet-card { display:flex; flex-direction:column; align-items:flex-start; border:1px solid var(--line); border-radius:17px; padding:1.25rem; background:var(--bg-raise); min-height:310px; }
+.poet-card h3 { font:400 2.2rem/1 var(--serif); margin:.6rem 0; }
+.poet-card p { color:var(--muted); font-size:.9rem; line-height:1.6; }
+.poet-card blockquote { font:italic 400 1.35rem/1.2 var(--serif); margin:.5rem 0; }
+.quote-note { color:var(--muted); font-size:.75rem; line-height:1.5; margin-bottom:1rem; }
+.poet-card a { font-size:.82rem; margin-top:auto; color:var(--accent); }
+.line-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; }
+.line-card { padding:1.25rem; border:1px solid var(--line); border-radius:16px; min-height:180px; background:radial-gradient(ellipse at 100% 0%,color-mix(in srgb,var(--accent) 13%,transparent),transparent 55%),var(--bg-raise); }
+.line-card span { color:var(--muted); font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; }
+.line-card p { font:400 1.7rem/1.1 var(--serif); margin:1rem 0; }
+.line-card small { color:var(--muted); font-size:.75rem; }
+.archive-mobile-list { display:flex; flex-direction:column; gap:.3rem; }
+.archive-mobile-list a { display:block; padding:.8rem .2rem; font-size:1.1rem; text-decoration:none; border-bottom:1px solid var(--line); }
+.archive-mobile-list a[aria-current="page"] { color:var(--accent); }
+@media(max-width:1050px) { .book-grid,.poet-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .source-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .archive-hero-grid { grid-template-columns:minmax(0,1fr) minmax(220px,.6fr); gap:2rem; } }
+@media(max-width:700px) { .archive-page { padding-top:6.5rem; } .archive-hero-grid { grid-template-columns:1fr; } .archive-note { min-height:230px; } .archive-section-heading { align-items:flex-start; } .book-grid,.poet-grid,.line-grid,.source-grid { grid-template-columns:1fr; } .history-era { grid-template-columns:1fr; gap:.7rem; } .archive-count { text-align:left; } .archive-statline { align-items:flex-start; flex-direction:column; } .book-card { min-height:0; } .poet-card { min-height:0; } }
+
+/* Poetry notebook: five-column editorial grid and selectable poet names. */
+#poetry-notebook .poet-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; }
+#poetry-notebook .poet-card { padding: 1.05rem; min-height: 330px; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+#poetry-notebook .poet-card h3 { margin: .7rem 0 .8rem; font-size: 2.55rem; line-height: .94; letter-spacing: -.025em; }
+#poetry-notebook .poet-card:first-child h3 { font-size: 3.35rem; }
+#poetry-notebook .poet-select { appearance: none; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font: inherit; line-height: inherit; letter-spacing: inherit; text-align: left; cursor: pointer; transition: color .18s ease, font-weight .18s ease; }
+#poetry-notebook .poet-select:hover { color: var(--accent); }
+#poetry-notebook .poet-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
+#poetry-notebook .poet-card.is-selected { border-color: var(--accent); background: radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 58%), var(--bg-raise); }
+#poetry-notebook .poet-card.is-selected .poet-select { color: var(--accent); font-weight: 700; }
+#poetry-notebook .poet-card.is-selected .poet-lang { color: var(--accent); }
+@media (max-width: 1100px) { #poetry-notebook .poet-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 1050px) { #poetry-notebook .poet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { #poetry-notebook .poet-grid { grid-template-columns: 1fr; } #poetry-notebook .poet-card h3, #poetry-notebook .poet-card:first-child h3 { font-size: 2.8rem; } }

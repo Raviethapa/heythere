@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal corner of the internet by Ravie Thapa — numbers, stories, cinema, history, literature, and ideas.">
+  <meta name="theme-color" content="#0d0c0b">
+  <title>hey, ravie. — a personal archive</title>
+  <script>
+    try { document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("ravie-theme") === "light" ? "light" : "dark"); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-bar">
+      <a class="wordmark" href="index.html" aria-label="hey, ravie. — home">hey, ravie.</a>
+
+      <nav class="dock d-none d-lg-block" aria-label="Primary navigation">
+        <ul class="dock-list" role="menubar" aria-label="Main sections">
+          <li><button class="dock-link mega-trigger" type="button" data-section="about" aria-expanded="false" aria-controls="megaPanel" role="menuitem">About</button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="work" aria-expanded="false" aria-controls="megaPanel" role="menuitem">What I do <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="shelf" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Reading &amp; watching <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="notes" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Notes <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="archive" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Archive <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+        </ul>
+
+        <section class="mega-shell" id="megaPanel" aria-label="Section menu" hidden>
+          <div class="mega-preview scene-about" id="megaPreview" aria-live="polite">
+            <div class="scene-art" aria-hidden="true"><span class="scene-orb"></span><span class="scene-horizon"></span><span class="scene-object scene-object-one"></span><span class="scene-object scene-object-two"></span></div>
+            <div class="mega-preview-copy"><span class="tag" id="megaEyebrow">01 / ABOUT</span><h2 id="megaTitle">Who&rsquo;s Ravie?</h2><p id="megaDescription">A curious mind trying to make sense of a complicated world.</p></div>
+          </div>
+          <div class="mega-right">
+            <div class="mega-links-area">
+              <div class="mega-section-head"><p class="mega-label" id="megaListLabel">TAKE A LOOK AROUND</p><p class="mega-note" id="megaNote">A few things about the person behind the page.</p></div>
+              <ul class="mega-list" id="megaLinks">
+                <li><a href="about.html">My story <span class="arr" aria-hidden="true"></span></a></li>
+                <li><a href="about.html#values">Values &amp; beliefs <span class="arr" aria-hidden="true"></span></a></li>
+                <li><a href="about.html#facts">A few facts <span class="arr" aria-hidden="true"></span></a></li>
+              </ul>
+            </div>
+            <aside class="mega-card" id="megaQuoteCard">
+              <div><p class="small" id="megaQuoteLabel">A LINE I KEEP</p><p class="big" id="megaQuote">“Still figuring things out, and that&rsquo;s the plan.”</p><p class="mega-quote-note" id="megaQuoteNote">Curiosity is a work in progress.</p></div>
+              <a id="megaCta" href="about.html">Read my story <span class="arr" aria-hidden="true"></span></a>
+            </aside>
+          </div>
+        </section>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-pill d-none d-lg-inline-flex" href="index.html#hello">Say hello <span class="arr" aria-hidden="true"></span></a>
+        <button class="icon-btn js-theme" type="button" aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        </button>
+        <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <span class="wordmark" id="mobileMenuLabel">hey, ravie.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="m-list">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <details>
+            <summary>What I do</summary>
+            <div class="m-sub">
+              <a href="index.html#work-accounting">Accounting &amp; GST</a>
+              <a href="index.html#work-people">People &amp; processes</a>
+              <a href="index.html#work-documents">Documents &amp; clarity</a>
+              <a href="index.html#work-workflow">Workflow design</a>
+              <a href="index.html#work-finance">Finance &amp; protection</a>
+              <a href="index.html#work-digital">Digital ideas</a>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Reading &amp; watching</summary>
+            <div class="m-sub">
+              <a href="books-authors.html">Books &amp; authors</a>
+              <a href="films-cinema.html">Films &amp; cinema</a>
+              <a href="world-history.html">World history</a>
+              <a href="poetry-lines.html">Poetry &amp; lines</a>
+              <a href="index.html#notes">Between the Lines (coming soon)</a>
+            </div>
+          </details>
+        </li>
+        <li><a href="index.html#notes">Notes</a></li>
+        <li><a href="index.html#practice">How I work</a></li>
+        <li><a href="index.html#archive">Archive</a></li>
+      </ul>
+      <div class="m-foot">
+        <a class="btn btn-accent" href="index.html#hello">Say hello</a>
+        <button class="icon-btn js-theme" type="button" aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <header class="hero hero-landing" id="home">
+      <div class="wrap hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">A PERSONAL CORNER OF THE INTERNET</p>
+          <h1><span class="line">hei there,</span><span class="line">nice to meet you <span class="hero-dash">—</span></span><span class="line">it&rsquo;s <em>ravie.</em></span></h1>
+          <p class="hero-intro">Curious about almost everything — books, cinema, history, ideas, and the in-between.</p>
+          <p class="hero-sub">A living record of what I&rsquo;m learning, making, reading, watching, and still trying to understand.</p>
+          <div class="hero-actions"><a class="btn btn-accent" href="about.html">A little about me <span class="arr" aria-hidden="true"></span></a><a class="text-link" href="#archive">Wander through the archive</a></div>
+        </div>
+
+        <div class="hero-art-wrap">
+          <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover" aria-label="A visual tour of Ravie’s interests">
+            <div class="carousel-indicators hero-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1: Solar system"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2: Galaxy"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3: Museum of ideas"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="hero-art art-solar" role="img" aria-label="An abstract solar system representing books, cinema, history and ideas">
+                  <svg class="solar-svg" viewBox="0 0 620 500" aria-hidden="true">
+                    <defs><radialGradient id="sunGlow"><stop offset="0" stop-color="#f7c276" stop-opacity=".95"/><stop offset=".42" stop-color="#d88a32" stop-opacity=".5"/><stop offset="1" stop-color="#d88a32" stop-opacity="0"/></radialGradient><linearGradient id="planetCream"><stop stop-color="#fff3d9"/><stop offset="1" stop-color="#a98c66"/></linearGradient></defs>
+                    <g class="star-field"><circle cx="86" cy="115" r="2"/><circle cx="520" cy="88" r="2.5"/><circle cx="460" cy="412" r="1.8"/><circle cx="120" cy="380" r="1.6"/><circle cx="560" cy="300" r="1.4"/><circle cx="260" cy="55" r="1.7"/></g>
+                    <g transform="translate(315 250)"><circle r="172" class="orbit orbit-one"/><circle r="132" class="orbit orbit-two"/><circle r="91" class="orbit orbit-three"/><ellipse rx="205" ry="145" class="orbit orbit-four" transform="rotate(-28)"/><circle r="66" fill="url(#sunGlow)"/><circle r="22" class="sun-core"/><circle cx="0" cy="-132" r="9" class="planet planet-cream"/><circle cx="132" cy="0" r="11" class="planet planet-amber"/><circle cx="-91" cy="0" r="7" class="planet planet-soft"/><circle cx="120" cy="-105" r="5" class="planet planet-cream"/></g>
+                    <g class="art-labels"><path d="M310 118H205L178 95H100"/><text x="98" y="88">BOOKS</text><path d="M448 240H520L545 218H585"/><text x="495" y="205">CINEMA</text><path d="M229 320H142L118 342H52"/><text x="50" y="365">HISTORY</text><path d="M394 352H470L494 375H575"/><text x="500" y="400">IDEAS</text></g>
+                  </svg>
+                  <div class="art-caption"><span>01 / 03</span><p>Everything has an orbit.</p></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="hero-art art-galaxy" role="img" aria-label="An abstract amber galaxy representing stories and possibilities">
+                  <svg class="galaxy-svg" viewBox="0 0 620 500" aria-hidden="true">
+                    <defs><radialGradient id="galaxyCore"><stop offset="0" stop-color="#fff0cf"/><stop offset=".12" stop-color="#f6bc68"/><stop offset=".45" stop-color="#b96b25" stop-opacity=".6"/><stop offset="1" stop-color="#3a2113" stop-opacity="0"/></radialGradient></defs>
+                    <g class="star-field"><circle cx="82" cy="122" r="2"/><circle cx="520" cy="72" r="1.7"/><circle cx="500" cy="415" r="2.2"/><circle cx="102" cy="385" r="1.5"/><circle cx="565" cy="285" r="1.6"/><circle cx="260" cy="48" r="1.6"/><circle cx="425" cy="120" r="1.3"/></g>
+                    <g transform="translate(320 250) rotate(-23)"><ellipse rx="210" ry="82" class="galaxy-arm arm-one"/><ellipse rx="185" ry="60" class="galaxy-arm arm-two"/><ellipse rx="160" ry="40" class="galaxy-arm arm-three"/><ellipse rx="125" ry="25" class="galaxy-arm arm-four"/><circle r="115" fill="url(#galaxyCore)"/><circle r="12" class="galaxy-center"/><path d="M-195 0C-105 -118 85 -130 180 -12S95 115 -35 77S-120 -24 -25 -51S111 -18 88 33" class="galaxy-thread"/></g>
+                    <g class="art-labels"><path d="M190 190H122L95 168H52"/><text x="50" y="155">STORIES</text><path d="M448 155H508L530 132H586"/><text x="500" y="116">PEOPLE</text><path d="M426 340H492L515 360H586"/><text x="490" y="386">POSSIBILITIES</text></g>
+                  </svg>
+                  <div class="art-caption"><span>02 / 03</span><p>A mind full of questions.</p></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="hero-art art-gallery" role="img" aria-label="A surreal museum of ideas with abstract artworks and warm spotlights">
+                  <div class="gallery-wall"></div><div class="gallery-floor"></div><div class="gallery-light"></div>
+                  <div class="gallery-frame frame-one"><span class="artwork artwork-moon"></span></div><div class="gallery-frame frame-two"><span class="artwork artwork-lines"></span></div><div class="gallery-frame frame-three"><span class="artwork artwork-sun"></span></div>
+                  <div class="gallery-pedestal"><span class="gallery-sculpture"></span></div><div class="gallery-arch"><span></span></div><div class="gallery-caption"><span>03 / 03</span><p>A museum of ideas.</p></div>
+                  <div class="gallery-side-note">A curious mind<br>lives a richer life.</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev hero-control" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous slide"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next hero-control" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next slide"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+          </div>
+          <p class="hero-art-footnote"><span class="footnote-rule"></span> A mind full of questions, a love for stories, and a search for perspective.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="rule-band">
+      <div class="wrap">
+        <blockquote>&ldquo;Stay curious. Learn deeply. Build things that are useful.&rdquo;</blockquote>
+        <p>A principle in progress.</p>
+      </div>
+    </div>
+
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="workTitle">What I do</h2>
+          <p class="lead-serif">A practical mix of accounting, operations, documentation, and making everyday systems easier to use.</p>
+        </div>
+        <div class="work-list">
+          <article class="work-row" id="work-accounting"><h3>Accounting &amp; GST</h3><p>Working with accounting details, GST data, invoice information, calculations, and consistency checks.</p><p class="work-meta">Numbers, accuracy</p></article>
+          <article class="work-row" id="work-people"><h3>People &amp; processes</h3><p>Thinking through attendance, leave workflows, employee communication, and practical administration.</p><p class="work-meta">People, systems</p></article>
+          <article class="work-row" id="work-documents"><h3>Documents &amp; clarity</h3><p>Organising information into letters, structured documents, policies, forms, and clear requirements.</p><p class="work-meta">Words, structure</p></article>
+          <article class="work-row" id="work-workflow"><h3>Workflow design</h3><p>Finding gaps and edge cases, then shaping processes that other people can follow consistently.</p><p class="work-meta">Problem solving</p></article>
+          <article class="work-row" id="work-finance"><h3>Finance &amp; protection</h3><p>Building knowledge around insurance, mutual funds, personal finance, and professional learning.</p><p class="work-meta">Finance, learning</p></article>
+          <article class="work-row" id="work-digital"><h3>Digital ideas</h3><p>Exploring simple forms, web interfaces, data organisation, and tools that make work more usable.</p><p class="work-meta">Ideas, design</p></article>
+        </div>
+
+        <div class="row g-5 mt-3">
+          <div class="col-lg-6 chip-block">
+            <h3>Project directions</h3>
+            <div class="chips" data-verify title="Confirm these project names are cleared for public sharing">
+              <span class="chip">Attendance parsing</span><span class="chip">CSC Visit Tracker</span><span class="chip">Invoice UX review</span><span class="chip">GST template quality checks</span><span class="chip">Personal book library</span>
+            </div>
+            <p class="fine">Write-ups will be added as sanitised examples.</p>
+          </div>
+          <div class="col-lg-6 chip-block">
+            <h3>Learning &amp; qualifications</h3>
+            <div class="chips">
+              <span class="chip" data-verify title="Verify: Group I or Group II?">CMA Intermediate, preparing for Group II</span>
+              <span class="chip" data-verify title="Verify certificate wording and date">Certified Accounting Technician (ICMAI)</span>
+              <span class="chip" data-verify title="Verify: V-A or X-A? Is the ARN current?">NISM Series V-A, AMFI ARN holder</span>
+              <span class="chip" data-verify title="Verify dates">Tally ERP 9 training</span>
+            </div>
+            <p class="review-only">Every outlined item above is a public claim. Confirm wording and dates before publishing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="shelf" aria-labelledby="shelfTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="shelfTitle">Reading &amp; watching</h2>
+          <p class="lead-serif">A shelf for the stories, histories, ideas, and images I want to keep close.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="shelf-panel">
+              <h3>Books, ideas &amp; the margins.</h3>
+              <p>I&rsquo;m drawn to world history, literature, poetry, fiction, philosophy, and practical books that improve how I think or work.</p>
+              <div class="chips"><span class="chip">History &amp; society</span><span class="chip">Literature &amp; poetry</span><span class="chip">Finance &amp; learning</span></div>
+              <p class="fine">Titles will be added here as I confirm them.</p>
+              <p class="review-only">No book is claimed as a favourite or a completed read until you supply a verified list.</p>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="shelf-panel">
+              <h3>Films, people &amp; other worlds.</h3>
+              <p>I&rsquo;m interested in cinema across genres &mdash; especially stories about people and society, historical settings, literary adaptations, and films that leave questions behind.</p>
+              <div class="chips"><span class="chip">People &amp; society</span><span class="chip">Historical settings</span><span class="chip">Literary adaptations</span></div>
+              <p class="fine">Favourite films and directors are still to come.</p>
+              <p class="review-only">Favourite films and directors are not invented. Add your verified picks.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="notes" aria-labelledby="notesTitle">
+      <div class="wrap">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <h2 id="notesTitle" class="mb-4" style="font-size:clamp(2.5rem,5.6vw,4.5rem);line-height:1.02">Notes &amp; ideas</h2>
+            <p class="lead-serif mb-3">I want to keep learning across two worlds: the precision of numbers and the imagination of stories.</p>
+            <p class="deck">The best ideas are useful in practice, but they also change how we see things. This is where those ideas can live before they become something more finished.</p>
+            <blockquote class="pull-quote" data-verify title="Confirm the source of this line before publishing">be the light you are searching for.</blockquote>
+          </div>
+          <div class="col-lg-7">
+            <div class="note-list">
+              <a class="note-row" href="#archive"><span class="title">What history can teach us about the present</span><span class="cat">History, reflection</span><span class="arr" aria-hidden="true"></span></a>
+              <a class="note-row" href="#archive"><span class="title">Films, storytelling, and memorable characters</span><span class="cat">Cinema, culture</span><span class="arr" aria-hidden="true"></span></a>
+              <a class="note-row" href="#archive"><span class="title">Learning accounting through practical examples</span><span class="cat">Finance, learning</span><span class="arr" aria-hidden="true"></span></a>
+              <a class="note-row" href="#archive"><span class="title">Building simpler systems for small businesses</span><span class="cat">Workflows, design</span><span class="arr" aria-hidden="true"></span></a>
+              <a class="note-row" href="#archive"><span class="title">Poems and lines that stay with me</span><span class="cat">Poetry, words</span><span class="arr" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="practice" aria-labelledby="practiceTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="practiceTitle">How I work</h2>
+          <p class="deck">Not a list of percentage bars. Just the habits I&rsquo;m trying to make dependable.</p>
+        </div>
+        <div class="practice">
+          <div><h3>Organise the messy bits</h3><p>I like turning scattered information into something structured, readable, and usable.</p></div>
+          <div><h3>Look for the edge cases</h3><p>I try to think beyond the happy path: missing details, duplicate entries, exceptions, and what might go wrong.</p></div>
+          <div><h3>Make it practical</h3><p>A process should work in real situations and be clear enough for someone else to follow.</p></div>
+          <div><h3>Keep learning</h3><p>I&rsquo;m working on stronger English communication, deeper professional knowledge, and finishing what I start.</p></div>
+        </div>
+        <ol class="steps" aria-label="How a piece of work moves">
+          <li>Understand</li><li>Structure</li><li>Build</li><li>Review</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section archive" id="archive" aria-labelledby="archiveTitle">
+      <div class="wrap">
+        <div class="archive-head">
+          <div>
+            <h2 id="archiveTitle">A small, growing archive</h2>
+            <p class="deck">Search the themes I&rsquo;m collecting. The book and film lists will become more specific as I add confirmed titles.</p>
+          </div>
+          <div class="archive-count"><strong id="archiveCount">8</strong><span>topics shown</span></div>
+        </div>
+        <div class="archive-tools">
+          <label class="visually-hidden" for="archiveSearch">Search archive topics</label>
+          <input id="archiveSearch" type="search" class="form-control archive-search" placeholder="Search topics, projects, interests">
+          <div class="filter-group" role="group" aria-label="Filter archive topics">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Everything</button>
+            <button type="button" class="filter-btn" data-filter="read" aria-pressed="false">Reading</button>
+            <button type="button" class="filter-btn" data-filter="watch" aria-pressed="false">Watching</button>
+            <button type="button" class="filter-btn" data-filter="build" aria-pressed="false">Building</button>
+            <button type="button" class="filter-btn" data-filter="think" aria-pressed="false">Thinking</button>
+          </div>
+        </div>
+        <div class="row g-3" id="archiveGrid">
+          <div class="col-md-6 col-lg-3 archive-item" data-category="read"><article><span class="kind">Read, collect</span><h3>Books &amp; authors</h3><p>Verified reads, future reads, and notes from the margins.</p><small>To be filled</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="watch"><article><span class="kind">Watch, reflect</span><h3>Films &amp; cinema</h3><p>Films, directors, scenes, and stories worth returning to.</p><small>To be filled</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="think"><article><span class="kind">Study, connect</span><h3>World history</h3><p>Events and patterns that help make sense of the present.</p><small>Open notebook</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="read"><article><span class="kind">Keep, quote</span><h3>Poetry &amp; lines</h3><p>Words that say something I didn&rsquo;t know how to say.</p><small>To be filled</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="build"><article><span class="kind">Make, improve</span><h3>Useful systems</h3><p>Attendance rules, forms, invoice UX, and workflow ideas.</p><small>Selected projects</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="think"><article><span class="kind">Learn, apply</span><h3>Finance &amp; accounting</h3><p>Practical lessons from accounting, taxation, and finance.</p><small>Learning log</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="build"><article><span class="kind">Make, share</span><h3>Digital experiments</h3><p>Small web ideas, interfaces, and personal tools.</p><small>In progress</small></article></div>
+          <div class="col-md-6 col-lg-3 archive-item" data-category="think"><article><span class="kind">Notice, refine</span><h3>Personal reflections</h3><p>Notes on curiosity, work, learning, and everyday life.</p><small>Open notebook</small></article></div>
+        </div>
+        <p class="archive-empty" id="archiveEmpty" hidden>No topics match that search.<button type="button" id="archiveClear">Clear search and show all</button></p>
+      </div>
+    </section>
+
+    <section class="section closing" id="hello">
+      <div class="wrap">
+        <h2>Thanks for stopping by.</h2>
+        <p>This corner will change as I read more, watch more, learn more, and make more things. For now, that&rsquo;s the point.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="mailto:" data-verify title="Add your public email address">Write to Ravie</a>
+          <a class="text-link" href="#main">Back to the top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">hey, ravie.</a>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="index.html#work">What I do</a>
+        <a href="index.html#shelf">Reading &amp; watching</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#practice">How I work</a>
+        <a href="index.html#archive">Archive</a>
+      </nav>
+      <span>Made in Dehradun, India &middot; &copy; <span id="year"></span> Ravie Thapa</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

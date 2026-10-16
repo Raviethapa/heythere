@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ravie's personal cinema archive: films, stories, people, and ideas worth returning to.">
+  <meta name="theme-color" content="#0d0c0b">
+  <title>Films &amp; cinema — hey, ravie.</title>
+  <script>try { document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("ravie-theme") === "light" ? "light" : "dark"); } catch (e) {}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="films-cinema.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <div class="header-bar">
+      <a class="wordmark" href="index.html" aria-label="hey, ravie. — home">hey, ravie.</a>
+      <nav class="dock d-none d-lg-block" aria-label="Primary navigation">
+        <ul class="dock-list">
+          <li><a class="dock-link" href="about.html">About</a></li>
+          <li><a class="dock-link" href="index.html#work">What I do</a></li>
+          <li><a class="dock-link" href="index.html#shelf">Reading &amp; watching</a></li>
+          <li><a class="dock-link" href="index.html#notes">Notes</a></li>
+          <li><a class="dock-link" href="index.html#archive">Archive</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn-pill d-none d-lg-inline-flex" href="index.html#hello">Say hello <span class="arr" aria-hidden="true"></span></a>
+        <button class="icon-btn js-theme" type="button" aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        </button>
+        <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+      </div>
+    </div>
+  </header>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header"><span class="wordmark" id="mobileMenuLabel">hey, ravie.</span><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button></div>
+    <div class="offcanvas-body"><ul class="film-mobile-list">
+      <li><a href="about.html">About</a></li><li><a href="index.html#work">What I do</a></li><li><a href="index.html#shelf">Reading &amp; watching</a></li><li><a href="films-cinema.html" aria-current="page">Films &amp; cinema</a></li><li><a href="index.html#notes">Notes</a></li><li><a href="index.html#archive">Archive</a></li>
+    </ul></div>
+  </div>
+
+  <main id="main" class="film-page">
+    <section class="film-hero">
+      <div class="film-hero-top"><span class="film-eyebrow">03 / Stories that stay</span><span class="film-hero-note">A personal cinema notebook · Dehradun, India</span></div>
+      <div class="film-hero-grid">
+        <div>
+          <h1>Films, people<br><em>&amp; other worlds.</em></h1>
+          <p class="film-lead">A good film entertains you for two hours. A great one follows you home.</p>
+          <p class="film-intro">A small starting shelf, not a giant database. I’ll add films thoughtfully as I watch them, revisit them, and decide what deserves a place here.</p>
+          <div class="film-hero-tags"><span>People &amp; society</span><span>Historical stories</span><span>Ideas &amp; imagination</span></div>
+        </div>
+        <aside class="cinema-note"><span class="note-label">A note to self / 001</span><blockquote>“Don’t just ask whether it was good. Ask what it made you notice.”</blockquote><span class="note-foot">Watch closely. Think freely.</span><div class="reel-mark" aria-hidden="true">✳</div></aside>
+      </div>
+      <div class="film-statline"><span><strong id="filmCount">8</strong> films on the shelf</span><span>Not a ranking. A shelf in progress.</span><a href="#film-library">Explore the collection <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="film-library" id="film-library" aria-labelledby="libraryTitle">
+      <div class="film-section-heading">
+        <div><span class="film-eyebrow">The watchlist</span><h2 id="libraryTitle">Find your next <em>story.</em></h2><p>Search by title, genre, or the kind of question a film leaves behind.</p></div>
+        <div class="watchlist-count"><span class="watchlist-dot"></span><span><strong id="savedCount">0</strong> saved to your list</span></div>
+      </div>
+      <div class="film-controls">
+        <label class="film-search-wrap"><span class="visually-hidden">Search films</span><span class="search-symbol" aria-hidden="true">⌕</span><input id="filmSearch" type="search" placeholder="Search titles, genres, themes…" autocomplete="off"></label>
+        <div class="film-filters" role="group" aria-label="Filter films by genre">
+          <button class="film-filter is-active" type="button" data-genre="all" aria-pressed="true">All films</button>
+          <button class="film-filter" type="button" data-genre="drama" aria-pressed="false">Drama</button>
+          <button class="film-filter" type="button" data-genre="comedy" aria-pressed="false">Comedy</button>
+          <button class="film-filter" type="button" data-genre="science fiction" aria-pressed="false">Sci-fi</button>
+          <button class="film-filter" type="button" data-genre="biography" aria-pressed="false">Biography</button>
+        </div>
+      </div>
+      <div class="film-status-bar" role="group" aria-label="Filter films by your viewing status">
+        <span class="status-label">MY CINEMA LOG</span>
+        <button class="status-filter is-active" type="button" data-status-filter="all" aria-pressed="true">Everything <span id="allStatusCount">8</span></button>
+        <button class="status-filter" type="button" data-status-filter="watching" aria-pressed="false">Watching <span data-status-count="watching">0</span></button>
+        <button class="status-filter" type="button" data-status-filter="watched" aria-pressed="false">Watched <span data-status-count="watched">0</span></button>
+        <button class="status-filter" type="button" data-status-filter="will-watch" aria-pressed="false">Will watch <span data-status-count="will-watch">0</span></button>
+        <button class="status-filter" type="button" data-status-filter="in-list" aria-pressed="false">In list <span data-status-count="in-list">0</span></button>
+        <button class="tmdb-open" type="button" id="openTmdbSettings">Connect poster data ↗</button>
+      </div>
+      <div class="tmdb-settings" id="tmdbSettings" hidden>
+        <div><strong>Load genuine movie posters</strong><p>Use your TMDB API key to fetch posters, official titles, release years, genres and TMDB ratings. The key is saved only in this browser.</p><a href="https://www.themoviedb.org/settings/api" target="_blank" rel="noopener">Get a TMDB API key ↗</a></div>
+        <form id="tmdbForm" class="tmdb-form"><label for="tmdbKey">TMDB API Read Access Token</label><input id="tmdbKey" type="password" autocomplete="off" placeholder="Paste your Read Access Token" aria-describedby="tmdbHelp"><div id="tmdbHelp" class="tmdb-help">Use the API Read Access Token (Bearer token) from your TMDB account settings.</div><div class="tmdb-actions"><button class="btn btn-accent" type="submit">Load posters</button><button class="tmdb-clear" type="button" id="clearTmdbKey">Remove key</button></div><p id="tmdbMessage" role="status" aria-live="polite"></p></form>
+      </div>
+      <div class="film-results-line"><span id="resultsLabel">Loading the film catalogue…</span><span class="film-disclaimer">Starter catalogue · set your own viewing status</span></div>
+      <div class="row g-3 film-grid" id="filmGrid" aria-live="polite"></div>
+      <div class="film-empty" id="filmEmpty" hidden><span class="empty-mark">⌕</span><h3>No films found.</h3><p>Try another title or clear the filters.</p><button class="btn btn-accent" id="clearFilmFilters" type="button">Clear filters</button></div>
+      <p class="film-review-note"><strong>About the data:</strong> The full catalogue is bundled with this page and works offline without a poster API. Connect TMDB above to load poster artwork for the supported starter titles. Viewing status and personal ratings are stored in this browser. TMDB data and images are subject to TMDB's terms and attribution requirements; this product uses the TMDB API but is not endorsed or certified by TMDB. Rotten Tomatoes scores are not fetched or copied.</p>
+      <div class="tmdb-attribution"><a href="https://www.themoviedb.org/" target="_blank" rel="noopener" aria-label="The Movie Database website">TMDB</a><span>Movie data and poster images provided by The Movie Database (TMDB), when connected.</span><a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener">Attribution guidance ↗</a></div>
+    </section>
+
+    <section class="film-closing"><div class="closing-mark" aria-hidden="true">✳</div><span class="film-eyebrow">After the credits</span><h2>Books give me words.<br><em>Films give me faces.</em></h2><p>Both give me better questions.</p><a class="text-link" href="index.html#shelf">Back to reading &amp; watching <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><a class="wordmark" href="index.html">hey, ravie.</a><nav aria-label="Footer"><a href="about.html">About</a><a href="index.html#work">What I do</a><a href="index.html#shelf">Reading &amp; watching</a><a href="index.html#notes">Notes</a><a href="index.html#archive">Archive</a></nav><span>Made in Dehradun, India · © <span id="year"></span> Ravie Thapa</span></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="films-cinema.js"></script>
+</body>
+</html>

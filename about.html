@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet Ravie: somewhere between business, books, films, history, and the questions that make life interesting.">
+  <meta name="theme-color" content="#0d0c0b">
+  <title>Somewhere between numbers and narratives — ravie</title>
+  <script>
+    try { document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("ravie-theme") === "light" ? "light" : "dark"); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-bar">
+      <a class="wordmark" href="index.html" aria-label="hey, ravie. — home">hey, ravie.</a>
+
+      <nav class="dock d-none d-lg-block" aria-label="Primary navigation">
+        <ul class="dock-list" role="menubar" aria-label="Main sections">
+          <li><button class="dock-link mega-trigger" type="button" data-section="about" aria-expanded="false" aria-controls="megaPanel" role="menuitem">About</button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="work" aria-expanded="false" aria-controls="megaPanel" role="menuitem">What I do <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="shelf" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Reading &amp; watching <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="notes" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Notes <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+          <li><button class="dock-link mega-trigger" type="button" data-section="archive" aria-expanded="false" aria-controls="megaPanel" role="menuitem">Archive <svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+        </ul>
+
+        <section class="mega-shell" id="megaPanel" aria-label="Section menu" hidden>
+          <div class="mega-preview scene-about" id="megaPreview" aria-live="polite">
+            <div class="scene-art" aria-hidden="true"><span class="scene-orb"></span><span class="scene-horizon"></span><span class="scene-object scene-object-one"></span><span class="scene-object scene-object-two"></span></div>
+            <div class="mega-preview-copy"><span class="tag" id="megaEyebrow">01 / ABOUT</span><h2 id="megaTitle">Who&rsquo;s Ravie?</h2><p id="megaDescription">A curious mind trying to make sense of a complicated world.</p></div>
+          </div>
+          <div class="mega-right">
+            <div class="mega-links-area">
+              <div class="mega-section-head"><p class="mega-label" id="megaListLabel">TAKE A LOOK AROUND</p><p class="mega-note" id="megaNote">A few things about the person behind the page.</p></div>
+              <ul class="mega-list" id="megaLinks">
+                <li><a href="about.html">My story <span class="arr" aria-hidden="true"></span></a></li>
+                <li><a href="about.html#values">Values &amp; beliefs <span class="arr" aria-hidden="true"></span></a></li>
+                <li><a href="about.html#facts">A few facts <span class="arr" aria-hidden="true"></span></a></li>
+              </ul>
+            </div>
+            <aside class="mega-card" id="megaQuoteCard">
+              <div><p class="small" id="megaQuoteLabel">A LINE I KEEP</p><p class="big" id="megaQuote">“Still figuring things out, and that&rsquo;s the plan.”</p><p class="mega-quote-note" id="megaQuoteNote">Curiosity is a work in progress.</p></div>
+              <a id="megaCta" href="about.html">Read my story <span class="arr" aria-hidden="true"></span></a>
+            </aside>
+          </div>
+        </section>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-pill d-none d-lg-inline-flex" href="index.html#hello">Say hello <span class="arr" aria-hidden="true"></span></a>
+        <button class="icon-btn js-theme" type="button" aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        </button>
+        <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <span class="wordmark" id="mobileMenuLabel">hey, ravie.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="m-list">
+        <li><a href="about.html">About</a></li>
+        <li>
+          <details>
+            <summary>What I do</summary>
+            <div class="m-sub">
+              <a href="index.html#work-accounting">Accounting &amp; GST</a>
+              <a href="index.html#work-people">People &amp; processes</a>
+              <a href="index.html#work-documents">Documents &amp; clarity</a>
+              <a href="index.html#work-workflow">Workflow design</a>
+              <a href="index.html#work-finance">Finance &amp; protection</a>
+              <a href="index.html#work-digital">Digital ideas</a>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Reading &amp; watching</summary>
+            <div class="m-sub">
+              <a href="index.html#shelf">The shelf</a>
+              <a href="films-cinema.html">Films &amp; cinema</a>
+              <a href="index.html#archive">World history</a>
+              <a href="index.html#notes">Poetry &amp; lines</a>
+            </div>
+          </details>
+        </li>
+        <li><a href="index.html#notes">Notes</a></li>
+        <li><a href="index.html#practice">How I work</a></li>
+        <li><a href="index.html#archive">Archive</a></li>
+      </ul>
+      <div class="m-foot">
+        <a class="btn btn-accent" href="index.html#hello">Say hello</a>
+        <button class="icon-btn js-theme" type="button" aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 2.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <header class="about-hero about-hero-v5">
+      <div class="wrap">
+        <div class="about-thought" id="aboutThoughtCard" aria-live="polite">
+          <span class="about-thought-label">a thought, before the introduction</span>
+          <p id="aboutThoughtText">A curious mind, a little overthinking, and a lot of unfinished ideas.</p>
+          <span id="aboutThoughtCredit">— From Ravie’s thought collection · original draft</span>
+        </div>
+
+        <div class="about-intro-grid">
+          <div class="about-intro-copy">
+            <p class="eyebrow">A PERSONAL INTRODUCTION</p>
+            <h1>Somewhere between <em>numbers</em> and <em>narratives.</em></h1>
+            <p class="hero-deck">An introduction to the person, not just the things he likes.</p>
+            <p class="hero-intro">Hey, I’m Ravie. I live in Dehradun, India, and work in the world of business, people, finance and everyday problem-solving.</p>
+          </div>
+          <div class="personality-block" aria-label="A rotating collection of words that might describe Ravie" tabindex="0">
+            <span class="personality-kicker">depending on the day, i might be</span>
+            <span id="personalityWord" class="personality-word" aria-live="polite">overthinker</span>
+            <p id="personalityDefinition" class="personality-definition">Someone who can turn one small thought into a full committee meeting in their head.</p>
+            <div class="personality-progress" aria-hidden="true"><span id="personalityProgress"></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section about-story" id="story" aria-labelledby="workTitle">
+      <div class="wrap about-story-grid">
+        <div class="story-aside"><span class="eyebrow">01 / THE PRACTICAL SIDE</span><h2 id="workTitle">So, what do I actually do?</h2></div>
+        <div class="story-copy">
+          <p>My professional life involves making sense of things that need structure: processes, responsibilities, numbers, documents and the small details that can make a business run better—or make an otherwise simple task unnecessarily complicated.</p>
+          <p>I’m pursuing an MBA in Finance (2026–2028), preparing for CMA India Final, and continuing to deepen my understanding of accounting, research, and business. I also hold a SEBI Research Analyst certificate.</p>
+          <p>I like work that has a purpose. Something that starts as a problem, becomes a plan, and eventually turns into something that actually works. I’m interested not just in getting things done, but in understanding how they could be done better.</p>
+          <p class="story-last">I’m practical by necessity, curious by nature, and still figuring out how to become better at both.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-story about-story-alt" id="curiosity" aria-labelledby="outsideTitle">
+      <div class="wrap about-story-grid">
+        <div class="story-aside"><span class="eyebrow">02 / THE CURIOUS SIDE</span><h2 id="outsideTitle">And who am I outside work?</h2></div>
+        <div class="story-copy">
+          <p>I’m someone who rarely stays interested in just one subject for very long.</p>
+          <p>A film might lead me to a question about human behaviour. A historical event might make me think about power, ambition or the mistakes people keep repeating. A poem might express something I’ve felt but never quite managed to put into words.</p>
+          <p>And sometimes, one innocent question turns into an evening of reading, researching and opening seventeen browser tabs that I fully intend to organise later.</p>
+          <p>I enjoy understanding the connections between things: how people think, why societies change, what stories reveal about us, and why the same human problems seem to return in different forms throughout history.</p>
+          <p>I’m drawn to books, cinema, philosophy, psychology and the kind of conversations that leave you thinking long after they’ve ended. I don’t claim to be an expert in all these things. I’m simply interested enough to keep learning.</p>
+          <div class="interest-tags" aria-label="Interests"><span>Business &amp; systems</span><span>Films</span><span>World history</span><span>Literature</span><span>Poetry</span><span>Human behaviour</span><span>Philosophy</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-story" id="becoming" aria-labelledby="becomingTitle">
+      <div class="wrap about-story-grid">
+        <div class="story-aside"><span class="eyebrow">03 / STILL BECOMING</span><h2 id="becomingTitle">I’m still becoming the person I want to be.</h2></div>
+        <div class="story-copy">
+          <p>I don’t have a perfectly organised life, a grand five-year plan for every aspect of it, or an answer to every question I ask.</p>
+          <p>I’m working on my professional growth, continuing my studies, improving how I communicate, and learning to turn ideas into actual projects rather than leaving them as interesting possibilities.</p>
+          <p>Some days I’m disciplined and focused. Other days, I can spend more time thinking about the best way to do something than actually doing it.</p>
+          <p>I’m learning that progress isn’t always dramatic. Sometimes it’s getting better at a skill, handling a difficult situation with more patience, admitting that you were wrong, or finally finishing something you’ve been putting off.</p>
+          <p class="story-last">I want to become someone who can think clearly, work responsibly, communicate honestly and remain curious without needing to have everything figured out. That feels like a worthwhile direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section beliefs-section" id="values" aria-labelledby="beliefsTitle">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">04 / A FEW ANCHORS</p><h2 id="beliefsTitle">A few things I believe.</h2><p class="deck">Not commandments. Just ideas I keep coming back to.</p></div>
+        <div class="row g-4">
+          <div class="col-md-4"><article class="belief"><span class="belief-number">01</span><h3>Knowledge isn’t the same as wisdom.</h3><p>You can know a great deal and still have a lot to learn about people, patience and yourself.</p></article></div>
+          <div class="col-md-4"><article class="belief"><span class="belief-number">02</span><h3>Take the work seriously.</h3><p>Do the work responsibly, but don’t become so serious that you forget to laugh at yourself.</p></article></div>
+          <div class="col-md-4"><article class="belief"><span class="belief-number">03</span><h3>Curiosity needs humility.</h3><p>Question your own assumptions, not just everyone else’s. Being willing to learn matters more than appearing right.</p></article></div>
+          <div class="col-md-4"><article class="belief"><span class="belief-number">04</span><h3>People are more than first impressions.</h3><p>A job title tells you something about someone’s work. It tells you very little about their character.</p></article></div>
+          <div class="col-md-4"><article class="belief"><span class="belief-number">05</span><h3>Humour should make room, not harm.</h3><p>A little irony can make difficult conversations easier. It should never come at the expense of someone’s dignity.</p></article></div>
+          <div class="col-md-4"><article class="belief"><span class="belief-number">06</span><h3>Not everything needs a grand plan.</h3><p>You don’t need to turn every interest into a career, every thought into a conclusion, or every day into a personal-growth project.</p></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-story about-story-alt" id="what-to-expect" aria-labelledby="expectTitle">
+      <div class="wrap about-story-grid">
+        <div class="story-aside"><span class="eyebrow">05 / WHAT YOU’LL FIND HERE</span><h2 id="expectTitle">A little work. A little wonder.</h2></div>
+        <div class="story-copy">
+          <p>Probably someone who enjoys a thoughtful conversation, appreciates a good story, asks a few more questions than necessary, and occasionally finds humour in the most ordinary things.</p>
+          <p>I’m interested in meeting people who are curious about the world, passionate about something they do, or simply willing to have an honest conversation without pretending to know everything.</p>
+          <p>You don’t have to share my interests. You don’t even have to agree with my opinions. I’d rather have an interesting disagreement than a conversation in which everyone is trying to sound impressive.</p>
+          <p>And if you’re having a difficult day, feeling a little lost, or just want to talk to someone without needing a particular reason, you’re welcome to say hello, too. You don’t have to arrive with an interesting topic or the perfect words.</p>
+          <p class="story-last">Sometimes, it’s enough to be interested, to pay attention, and to keep going.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-note" aria-labelledby="lastThingTitle">
+      <div class="wrap final-note-inner"><p class="eyebrow">ONE LAST THING</p><h2 id="lastThingTitle">This isn’t a finished version of me.</h2><div><p>I’m building this website to collect the things I’m learning, the ideas I’m exploring, the stories that stay with me, and the projects I want to make real.</p><p>Some of it will be professional. Some of it will be personal. Some of it might change as I change my mind—which, given the overthinking, is not an entirely unlikely possibility.</p><p>Think of this website as a record of an ongoing process: a little work, a little reading, a few experiments, some questions, and the occasional unnecessarily long thought.</p><p class="signoff">I’m glad you found your way here.<br><span>— ravie</span></p></div></div>
+    </section>
+
+    <section class="section" id="profile" aria-labelledby="profileTitle">
+      <div class="wrap">
+        <div class="section-head text-center mx-auto"><p class="eyebrow">THE HUMAN BEHIND THE PAGE</p><h2 id="profileTitle">Come say hello.</h2><p class="deck mx-auto">No perfect opening line required.</p></div>
+        <div class="profile-card profile-card-v5">
+          <div class="profile-orb-column">
+            <div class="avatar-wrap"><div class="avatar" id="avatarFallback" role="img" aria-label="Rotating personality words"><span class="avatar-orbit" aria-hidden="true"></span><span class="avatar-word" id="profileWord">overthinker</span></div><img class="profile-photo" id="profilePhoto" src="assets/ravie.jpg" alt="ravie" hidden></div>
+          </div>
+          <div class="profile-details">
+            <p class="eyebrow">PRACTICAL BY NECESSITY. CURIOUS BY NATURE.</p>
+            <h3 class="profile-name">ravie</h3>
+            <p class="profile-bio">Working professional · CMA student · Curious reader · Film watcher</p>
+            <p class="profile-desc">Interested in the practical side of business and the human side of stories. Always learning; occasionally overthinking; usually collecting one more tab for later.</p>
+            <nav class="profile-links profile-icon-links" aria-label="Social and contact links">
+              <a href="mailto:" data-verify aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span>Email</span></a>
+              <a href="#" data-verify aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11 17v-7h3v1.2c.5-.9 1.2-1.4 2.4-1.4 1.8 0 2.6 1.2 2.6 3.2V17"/></svg><span>LinkedIn</span></a>
+              <a href="#" data-verify aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.6 6.7h.01"/></svg><span>Instagram</span></a>
+              <a href="#" data-verify aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg><span>YouTube</span></a>
+              <a href="books-authors.html" aria-label="Reading list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v18H7.5A2.5 2.5 0 0 1 5 17.5z"/><path d="M5 5v13M9 6h7M9 10h7"/></svg><span>Reading list</span></a>
+            </nav>
+            <p class="profile-foot"><span>Dehradun, India</span><span id="profileHeart" class="profile-heart" aria-label="heart">♥</span></p>
+            <div class="connection-note" aria-live="polite"><p class="feeling-line"><span class="feeling-prefix">feeling</span> <strong id="feelingWord">low</strong><span class="question-mark">?</span></p><p class="connection-copy">You can ping me or say hello. I may not have all the answers, but I’m happy to listen.</p><p class="connection-aside">No perfect words required. “Hey” is a perfectly good start.</p></div>
+            <p class="review-only">Social links are placeholders except Reading list. Add your preferred public URLs before publishing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">hey, ravie.</a>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="index.html#work">What I do</a>
+        <a href="index.html#shelf">Reading &amp; watching</a>
+        <a href="index.html#notes">Notes</a>
+        <a href="index.html#practice">How I work</a>
+        <a href="index.html#archive">Archive</a>
+      </nav>
+      <span>Made in Dehradun, India &middot; &copy; <span id="year"></span> Ravie Thapa</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="thoughts-data.js"></script>
+  <script src="about-interactions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
